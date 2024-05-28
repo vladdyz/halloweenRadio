@@ -1,0 +1,146 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/hallowsform.css" />
+  </head>
+  <body>
+    <main class="bg">
+      <div class="container">
+        <!--Artist & Genre elements side by side-->
+        <h3 class="form title">Request an Artist</h3>
+        <form
+          id="requestform"
+          action="https://httpbin.org/post"
+          method="post"
+          enctype="application/json"
+        >
+          <span class="artist">
+            <label for="artist" class="nametext"><i class="fa-solid fa-cat"></i> Artist</label
+            ><br />
+            <input
+              type="text"
+              id="artist"
+              name="ArtistName"
+              placeholder="The name of your artist"
+              required /><br
+          /></span>
+          <span class="genre"
+            ><label for="genre" class="nametext"><i class="fa-solid fa-ghost"></i> Genre</label
+            ><br />
+            <input
+              type="text"
+              id="genre"
+              list="genres"
+              name="genre"
+              placeholder="Select a genre"
+              required /><br />
+            <datalist id="genres">
+              <option value="Rock"></option>
+              <option value="Metal"></option>
+              <option value="Alternative"></option>
+              <option value="Synthwave"></option>
+              <option value="Gothic Metal/Rock"></option>
+              <option value="Folk"></option>
+              <option value="Neoclassical"></option>
+              <option value="Darksynth"></option>
+              <option value="Ambient"></option>
+              <option value="Darkwave/Ethereal Wave"></option></datalist></span
+          ><br />
+          <span class="socialmedia">
+            <label for="website" class="nametext"
+              ><i class="fa-solid fa-spider"></i> Social Media Link(s)</label
+            ><br />
+            <!--Regex pattern should match things like "wiki" or "bandcamp" for the url names-->
+            <input
+              type="url"
+              id="website"
+              title="Submit something like a wikipedia or bandcamp page"
+              name="Social Media"
+              placeholder="Paste the full links to the pages separated by commas"
+              required
+            /><br />
+          </span>
+          <div id="songsadd">
+            <label for="songName" class="nametext"
+              ><i class="fa-solid fa-cloud-moon"></i> Suggested Song(s)</label
+            ><br />
+            <input
+              type="text"
+              id="songName"
+              name="Song"
+              placeholder="Put the name of your song here"
+              required
+            />
+            <input
+              type="url"
+              id="songURL"
+              name="URL"
+              placeholder="Link your music video here"
+              required
+            /><br />
+            <label for="explicit" class="checkbox" name="explicit"
+              ><i class="fa-solid fa-crow"></i> Contains Explicit Lyrics?</label
+            >
+            <input type="checkbox" id="explicit" /><br />
+          </div>
+          <button type="button" id="addSongButton">Suggest another song</button>
+          <!--Form Submit button color: blue bg & white text, highlight: orange bg & black text-->
+          <br /><br />
+          <label for="formDesc" class="nametext"></label>
+          <textarea
+            id="formDesc"
+            name="Description"
+            title="Please keep it within 500 characters"
+            placeholder="Give us a brief description of the artist and why they fit with the theme of Hallows Eve Radio"
+            rows="10"
+            cols="150"
+            minlength="10"
+            maxlength="500"
+            required
+          ></textarea>
+
+          <br /><br />
+          <div id="subButtons">
+            <input type="submit" value="Submit Request" id="submit" class="formEnd" />
+            <input type="reset" value="Reset" id="refresh" class="formEnd" />
+          </div>
+        </form>
+      </div>
+    </main>
+    <div id="return">
+      <button type="button" id="returnbtn" onclick="window.location.href='index.html';">
+        Return to Hallows Eve Radio</button
+      >>
+    </div>
+    <br /><br />
+    <!--Sources cited for images and font-->
+    <footer>
+      <div class="scrollText">
+        <p class="cssSources">
+          Photography of Cat at Full Moon by Pixabay
+          (https://www.pexels.com/photo/photography-of-cat-at-full-moon-35888/), Photography of
+          Pumpkin Patch on the Ground during Nighttime by Steven Van Elk
+          (https://www.pexels.com/photo/pumpkin-patch-on-the-ground-during-nighttime-14399569/),
+          GOAT Font for "Hallows Eve Radio" header by Oliveira 37
+          (https://fontsrepo.com/goat-free-font) Smoke background by Peace Motions Music
+          (https://www.youtube.com/watch?v=ArGm859qkL8)
+        </p>
+      </div>
+    </footer>
+
+    <!--Songs and Artist objects-->
+    <script src="./js/artists.js"></script>
+    <script src="./js/songs.js"></script>
+
+    <script src="./js/request.js" async defer></script>
+  </body>
+</html>

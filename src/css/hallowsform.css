@@ -1,0 +1,285 @@
+body {
+  background-image: url("pexels-steven-van-elk-14399569.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+}
+
+.bg {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    align-items: center;
+    margin: 120px;
+    background-color: black;
+    color: white;
+    animation: cardborder 5s linear infinite alternate;
+    padding: 2em;
+    opacity: 0.97;
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    align-items: center;
+    margin: 60px;
+    background-color: black;
+    color: white;
+    animation: cardborder 5s linear infinite alternate;
+    padding: 2em;
+    opacity: 0.97;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    align-items: center;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    animation: cardborder 5s linear infinite alternate;
+    padding: 2em;
+    opacity: 0.97;
+  }
+}
+
+h3 {
+  color: orange;
+  text-align: center;
+  font-family: customFont;
+  font-size: 4.2em;
+  margin: 5px 0 30px;
+  animation: h3change 5s linear infinite alternate;
+}
+
+.artist {
+  display: inline-block;
+  align-items: left;
+  width: 49%;
+  margin: 10px 10px 10px 0;
+}
+
+.artist input[type="text"] {
+  width: 100%;
+  margin: 10px 0 0 0;
+  box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+}
+
+.genre {
+  display: inline-block;
+  align-items: right;
+  width: 49%;
+  margin: 10px 0 20px;
+}
+
+.genre input[type="text"] {
+  width: 100%;
+  margin: 10px 0 0 0;
+  box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+}
+
+.socialmedia {
+  display: block;
+  margin: 0 0 10px;
+  width: 99%;
+}
+
+.socialmedia input[type="text"] {
+  margin: 10px 0 0 0;
+  box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+}
+
+.nametext {
+  border: 2px solid rgb(25, 0, 32);
+}
+
+#website {
+  width: 100%;
+  margin: 10px 10px 10px 0;
+}
+
+#songname {
+  width: 40%;
+  margin: 10px 10px 10px 0;
+  box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+}
+
+.pad {
+  margin: 50px;
+}
+
+input.songName {
+  width: 40%;
+  margin: 10px 10px 10px 0;
+  box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+}
+
+@media only screen and (min-width: 1200px) {
+  #songURL {
+    width: 57%;
+    margin: 10px 0 10px 10;
+    box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+  }
+  input.songURL {
+    width: 57%;
+    margin: 10px 0 10px 10;
+    box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #songURL {
+    width: 50%;
+    margin: 10px 0 10px 10;
+    box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+  }
+  input.songURL {
+    width: 50%;
+    margin: 10px 0 10px 10;
+    box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+  }
+}
+
+#songsURL input[type="text"] {
+  align-items: right;
+  justify-content: right;
+  width: 100%;
+}
+
+.scrollText {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  align-items: end;
+}
+
+.cssSources {
+  font-size: 0.7em;
+  color: orange;
+  border: 3px solid crimson;
+  margin: 0 auto;
+  animation: scroll 69s linear infinite;
+  display: inline-block;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+  resize: none;
+}
+
+#addSongButton {
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  textarea {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  textarea {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+.formEnd {
+  background-color: dodgerblue;
+  color: whitesmoke;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px rgb(55, 4, 74);
+  text-align: center;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+}
+.formEnd:hover {
+  background-color: orangered;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 15px 4px rgb(122, 3, 41);
+}
+#subButtons {
+  text-align: center;
+}
+
+#return {
+  text-align: left;
+}
+#returnbtn {
+  color: orange;
+  background-color: black;
+  border: 1px solid crimson;
+  box-shadow: 0 0 15px 4px rgb(178, 1, 19);
+  cursor: pointer;
+  font-family: customFont;
+  transform: scale(2.5);
+  margin: 0 0 0 100px;
+}
+#returnbtn:hover {
+  background-color: rgb(255, 157, 0);
+  color: darkorchid;
+  box-shadow: 0 0 20px 6px rgb(255, 204, 0);
+}
+
+@font-face {
+  font-family: customFont;
+  src: url(GOAT.ttf);
+}
+
+@keyframes h3change {
+  0% {
+    color: rgb(255, 123, 0);
+  }
+  100% {
+    color: crimson;
+  }
+}
+
+@keyframes cardborder {
+  0% {
+    box-shadow: 0 0 0 2px rgb(55, 4, 74); /* Initial shadow */
+    opacity: 0.97;
+  }
+  100% {
+    box-shadow: 0 0 15px 4px rgb(74, 4, 45); /* Animated shadow */
+  }
+}
+
+@keyframes cardborderSelected {
+  0% {
+    box-shadow: 0 0 0 2px rgb(64, 1, 38); /* Initial shadow */
+    opacity: 0.85;
+  }
+  100% {
+    box-shadow: 0 0 15px 4px rgb(122, 3, 41); /* Animated shadow */
+  }
+}
+
+/* Sources and Text Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End off-screen to the left */
+  }
+}

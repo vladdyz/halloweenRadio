@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <meta name="author" content="Vladislav Zolotukhin" />
+
+    <title>WEB222 Music App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/hallow.css" />
+    <!--my personal css-->
+  </head>
+  <body>
+    <div class="cat">
+      <header>
+        <h1>Hallows Eve Radio</h1>
+        <h3>For all your Halloween music spooks</h3>
+        <br />
+        <p>
+          For when the leaves start to change<br /><br />
+          And the full moon lights the sky<br /><br />
+          Would you like to hear something strange<br /><br />
+          As the witching hour grows nigh...<br /><br /><br /><br />
+        </p>
+      </header>
+      <div id="rq">
+        <button class="request" onclick="window.location.href='request.html';">
+          Don't see your artist below? Request one here!
+        </button>
+      </div>
+      <nav id="menu">
+      </nav>
+    </div>
+    <hr />
+    <div class="october">
+      <main>
+        <h2 id="selected-artist">
+          <!-- Dynamically update the selected category title -->
+        </h2>
+        <!--Dynamically created cards go here-->
+        <div id="songs"></div>
+        <!--Background video source-->
+        <video autoplay muted loop id="october">
+          <source src="smoke.mp4" type="video/mp4" />
+        </video>
+      </main>
+    </div>
+    <footer>
+      <div id="newsletter">
+        <h3>
+          Subscribe to our monthly Hallows Eve newsletter&nbsp;<i
+            class="fa-solid fa-cloud-moon"
+          ></i>
+        </h3>
+        <br />
+        <form
+          id="subscribe"
+          action="https://httpbin.org/post"
+          method="post"
+          enctype="application/json"
+        >
+          <label for="email"></label>
+          <input
+            type="email"
+            id="emailAdd"
+            name="userEmail"
+            placeholder="Enter your email address"
+            required
+          />
+          <input type="submit" value="Subscribe" id="submit" class="formEnd" />
+        </form>
+      </div>
+    </footer>
+    <!--Sources cited for images and font-->
+    <div class="scrollText">
+      <p class="cssSources">
+        Photography of Cat at Full Moon by Pixabay
+        (https://www.pexels.com/photo/photography-of-cat-at-full-moon-35888/), Photography of
+        Pumpkin Patch on the Ground during Nighttime by Steven Van Elk
+        (https://www.pexels.com/photo/pumpkin-patch-on-the-ground-during-nighttime-14399569/), GOAT
+        Font for "Hallows Eve Radio" header by Oliveira 37 (https://fontsrepo.com/goat-free-font)
+        Smoke background by Peace Motions Music (https://www.youtube.com/watch?v=ArGm859qkL8)
+      </p>
+    </div>
+
+    <!-- JavaScript Data Files -->
+    <script src="./js/artists.js"></script>
+    <script src="./js/songs.js"></script>
+
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
