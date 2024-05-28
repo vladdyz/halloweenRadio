@@ -1,0 +1,1 @@
+Uses the Document Object Model (DOM) to display a selection of Halloween-themed songs in card format, allowing the user to browse a catalogue and sample the selection through or request a song through a form
